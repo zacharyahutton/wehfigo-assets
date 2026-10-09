@@ -17,8 +17,14 @@ html body.wehfigo-journal-page {
   box-shadow: none !important;
 }
 
-body.wehfigo-v2 > .wp-die-message {
+body.wehfigo-v2 > .wp-die-message,
+body.wehfigo-v2 .wp-die-message {
   display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 
 body.wehfigo-v2 p.wehfigo-hero-brand,
@@ -89,6 +95,34 @@ body.wehfigo-v2 .wehfigo-saved-nav-link svg {
   width: 18px !important;
   height: 18px !important;
   flex-shrink: 0;
+}
+
+body.wehfigo-v2 #header .header-widget a.button.sign-in,
+body.wehfigo-v2 #header .header-widget a.sign-in.button {
+  font-size: 0 !important;
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+}
+
+body.wehfigo-v2 #header .wehfigo-nav-submit-wrap .wehfigo-nav-submit-btn,
+body.wehfigo-v2 #header .wehfigo-nav-submit-wrap .wehfigo-submit-choice > button,
+body.wehfigo-v2 #header .wehfigo-nav-submit-wrap .wehfigo-submit-choice > a {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  font-size: 0 !important;
+  overflow: hidden !important;
+}
+
+body.wehfigo-v2 #header .wehfigo-nav-submit-wrap .wehfigo-submit-choice__text,
+body.wehfigo-v2 #header .wehfigo-nav-submit-wrap .wehfigo-submit-choice__caret {
+  display: none !important;
 }
 
 @media (max-width: 479px) {
