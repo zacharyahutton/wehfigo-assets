@@ -1,4 +1,7 @@
-﻿/* WehFiGo emergency desktop layout — defeats wp_die body{max-width:700px} */
+/* WehFiGo emergency layout + hero type
+   1) Defeat wp_die body{max-width:700px}
+   2) Restore hero brand size (Elementor p{font-size:inherit} was collapsing clamp rem)
+*/
 body.wehfigo-v2,
 body.wehfigo-v2#error-page,
 html body.home.wehfigo-v2,
@@ -9,4 +12,38 @@ html body.wehfigo-journal-page {
   padding: 0 !important;
   border: 0 !important;
   box-shadow: none !important;
+}
+
+body.wehfigo-v2 p.wehfigo-hero-brand,
+.elementor-widget-container p.wehfigo-hero-brand,
+p.wehfigo-hero-brand {
+  font-size: clamp(40px, 12vw, 90px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.045em !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+}
+
+body.wehfigo-v2 .wehfigo-hero-content h1,
+.elementor-widget-container .wehfigo-hero-content h1 {
+  font-size: clamp(22px, 2.8vw, 36px) !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+}
+
+body.wehfigo-v2 .wehfigo-hero-eyebrow {
+  font-size: 12px !important;
+  letter-spacing: 0.28em !important;
+}
+
+@media (max-width: 479px) {
+  body.wehfigo-v2 p.wehfigo-hero-brand,
+  .elementor-widget-container p.wehfigo-hero-brand,
+  p.wehfigo-hero-brand {
+    font-size: clamp(28px, 16vw, 40px) !important;
+  }
+  body.wehfigo-v2 .wehfigo-hero-content h1 {
+    font-size: 18px !important;
+  }
 }
