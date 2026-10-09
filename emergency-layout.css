@@ -1,7 +1,9 @@
-/* WehFiGo emergency layout + hero type
+/* WehFiGo emergency layout + hero type + header circles
    1) Defeat wp_die body{max-width:700px}
    2) Restore hero brand size (Elementor p{font-size:inherit} was collapsing clamp rem)
    3) Kill wp_die h1{border-bottom:#dadada} under hero typewriter
+   4) Hide footer wp_die toast
+   5) Saved + Sign In = 42px circles aligned with cart / theme toggle
 */
 body.wehfigo-v2,
 body.wehfigo-v2#error-page,
@@ -13,6 +15,10 @@ html body.wehfigo-journal-page {
   padding: 0 !important;
   border: 0 !important;
   box-shadow: none !important;
+}
+
+body.wehfigo-v2 > .wp-die-message {
+  display: none !important;
 }
 
 body.wehfigo-v2 p.wehfigo-hero-brand,
@@ -43,6 +49,46 @@ body.wehfigo-v2 h1 {
 body.wehfigo-v2 .wehfigo-hero-eyebrow {
   font-size: 12px !important;
   letter-spacing: 0.28em !important;
+}
+
+/* Header Saved + Sign In circles (match cart / theme toggle) */
+body.wehfigo-v2 .wehfigo-saved-nav-link,
+body.wehfigo-v2 #header a.sign-in,
+body.wehfigo-v2 #header .sign-in-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  border-radius: 999px !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+}
+
+body.wehfigo-v2 .wehfigo-saved-nav-link__text {
+  display: none !important;
+}
+
+body.wehfigo-v2 #header a.sign-in i,
+body.wehfigo-v2 #header .sign-in-button i,
+body.wehfigo-v2 #header a.sign-in .sl,
+body.wehfigo-v2 #header .sign-in-button .sl {
+  font-size: 16px !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+body.wehfigo-v2 .wehfigo-saved-nav-link svg {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0;
 }
 
 @media (max-width: 479px) {
