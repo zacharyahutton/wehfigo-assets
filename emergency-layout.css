@@ -1,0 +1,12 @@
+﻿/* WehFiGo emergency desktop layout — defeats wp_die body{max-width:700px} */
+body.wehfigo-v2,
+body.wehfigo-v2#error-page,
+html body.home.wehfigo-v2,
+html body.wehfigo-journal-page {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
